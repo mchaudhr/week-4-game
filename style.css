@@ -1,0 +1,22 @@
+
+
+.container {
+	background-image:url("http://cdn.wallpapersafari.com/14/76/xi3Icb.jpg");
+}
+#computerGuess {
+	height:90px;
+	background: 	#20B2AA;
+	color: White;
+}
+#img1 {
+	height:90px; 
+	width:90px;
+	margin-left:10px;
+}
+
+#userGuess {
+	padding-bottom: 43.5%;
+}
+#result{
+	padding-bottom: 40%;
+}
