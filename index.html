@@ -1,127 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Crystel Game</title>
-
-	<link rel="stylesheet" type="text/css" href="style.css">
-
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-
-
+    <meta charset="UTF-8">
+    <title>Crystel Game</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+    <link href="https://fonts.googleapis.com/css?family=Kite+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script   src="http://code.jquery.com/jquery-3.2.1.slim.js"   integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg="  crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="container text-center"> 
-	            <section>
-					<div class="page-header" id="Features">
-						<h3>Crystel Collector!</h3>
-					</div>
-					
-					<div class="panel-group" id="accordion">
-						<div class="panel panel-default">
-							<div class="panel-heading">
-								<div class="Panel-title">
-								<a href="#collapse-1" data-toggle="collapse" data-parent="#accordion">
-									<p>Directions!</p>
-								</a>	
-								</div>
-								<!-- End Panel Title -->
-								<div id="collapse-1" class="panel-collapse collapse in">
-									<div class="Panel-body">
-										You will be given a random number at the start of game.
-										There are four crystels below. By clicking on a crystel, you will add a specific amount of points to your total score.
-										You win the game by maatching your total score to random number.
-										The value of each crystel is hidden from you until you click on it.
-										Each time when the game will starts, the game will chnage the value of each crystel.
-									</div>
-								</div>
-								<!-- End Panel Collapse -->
-							</div>	
-						</div>
-					</div>
-				</section>
 
-				<section>
-					<div class="row">
-					
-						<div class="col-lg-6">
-					    	<div class="panel">
-								<div class="panel-heading" id="computerGuess">
-									<div class="Panel-title">
-									    <p>Target!</p>	
-									</div>
-									<!-- End Panel Title -->
-									
-									<div class="Panel-body">
-											computerGuess
-									</div>
-								</div>
-									<!-- End Panel Collapse -->
-							</div>	
-						</div>
+<div class="container-fluid text-center">
+    <div class="row">
+        <h1>CrystelCollector!</h1>
+    </div>
+    <div id="rules" class="row">
+        <br>
+        You will be given a random number at the start of the game.<br>
+        There are four crystals below. By cpcking on a crystal you will add a specific amount of points to your total score.<br>
+        You will win the game by matching your total score to random number, you lose the game if your total score goes above the random number.<br>
+        The value of each crystal is hidden from you until you click on it.<br>
+        Each time when the game starts, the game will change the values of each crystal.<br>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5" id="random">
+            <h3>Random Number</h3>
+            <h2>0</h2>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4" id="game">
+            <h3>Wins: 0</h3>
+            <h3>Losses: 0</h3>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            <a href="#" class="thumbnail">
+                <img src="assets/images/yellow.png" id="c1" >
+            </a>
+        </div>
+        <div class="col-md-2">
+            <a href="#" class="thumbnail">
+                <img src="assets/images/blue.png" id="c2">
+            </a>
+        </div>
+        <div class="col-md-2">
+            <a href="#" class="thumbnail">
+                <img src="assets/images/red.png" id="c3">
+            </a>
+        </div>
+        <div class="col-md-2">
+            <a href="#" class="thumbnail">
+                <img src="assets/images/green.png" id="c4">
+            </a>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <div class="row" id="total">
+        <h3>Your total score is: </h3>
+        <h2>0</h2>
+    </div>
+</div>
 
-						<div class="col-lg-6">
-								<ul class="list-inline">
-					                  <img id="img1" src="Red.jpg">
-					                  <img id="img1" src="Blue.jpg">
-					                  <img id="img1" src="Green.jpg">
-					                  <img id="img1" src="Yellow.jpg">
-					            
-					            </ul>
-					    </div>
-					    
-					</div>			
-				</section>
-				<section>
-					<div class="row">
+<script type="text/javascript" src="assets/javascript/game.js"></script>
 
-					<div class="col-lg-6">
-				    	<div class="panel">
-							<div class="panel-heading" id="result">
-								<div class="Panel-title">
-								    <p>Score!</p>	
-								</div>
-								<!-- End Panel Title -->
-								
-								<div class="Panel-body">
-										<div>Win: 0</div>
-										<div>Loose: 0</div>
-								</div>
-							</div>
-								<!-- End Panel Collapse -->
-						</div>	
-					</div>
-				
-					<div class="col-lg-6">
-				    	<div class="panel">
-							<div class="panel-heading" id="userGuess">
-								<div class="Panel-title">
-								    <p>Your Score is: </p>	
-								</div>
-								<!-- End Panel Title -->
-								
-								<div class="Panel-body">
-										Display added #s
-								</div>
-							</div>
-								<!-- End Panel Collapse -->
-						</div>	
-					</div>
-				</section>
-
-				
-	</div>
-
-
-
-
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-			<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

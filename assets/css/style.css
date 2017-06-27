@@ -1,3 +1,28 @@
-html {
-	background-image:url("Images/CrystelBackground.jpg");
+.container-fluid {
+	background-image: url("http://wallpapercave.com/wp/s2xVedw.jpg");
+	font-family: 'Kite One', sans-serif;
+	color: lightgray;
+}
+
+.thumbnail {
+	background: transparent;
+	height: 200px;
+	width: 200px;
+	padding: 20px;
+}
+
+#rules {
+	font-size: 18px;
+}
+
+#total {
+	margin: 20px;
+}
+
+#random {
+	margin: 20px;
+}
+
+#game {
+	margin: 20px;
 }
